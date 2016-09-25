@@ -1,9 +1,9 @@
 # MFmask
  The software called MFmask is used for automated clouds, cloud shadows, and snow masking for Landsat 4-8 images. The MFmask is developed by integrating Digital Elevation Model (DEM) data into the existing Fmask algorithm (Version 3.3; https://github.com/prs021/fmask). It is specifically designed for Landsat images acquired from mountainous area well (thereafter we call this algorithm MFmask, in which the letter “M” refers to mountainous). 
  
- The MFmask can provide cloud and cloud shadow detection at similar (or slightly better) accuracy than Fmask for flat places, and can provide substantial higher accuracy than Fmask for mountainous areas. 
+The MFmask can provide cloud and cloud shadow detection at similar (or slightly better) accuracy than Fmask for flat places, and can provide substantial higher accuracy than Fmask for mountainous areas. 
  
- Please contact Shi Qiu (qsly09@hotmail.com) at School of Resources and Environment, University of Electronic Science and Technology of China if you have any questions.
+Please contact Shi Qiu (qsly09@hotmail.com) at School of Resources and Environment, University of Electronic Science and Technology of China if you have any questions.
 Please cite the following papers:
 
 paper 1: Shi Q., Binbin H., Zhe Z., Zhanmang L., Cloud and cloud shadow detection in mountainous area for Landsat 4-8 images, submitted to Remote Sensing of Environment.
@@ -28,3 +28,6 @@ After running MFmask, there will be an image called XXXMFmask that can be opened
 4 => cloud
 
 255 => no observation
+
+One sample data can be download from the following link:
+https://pan.baidu.com/disk/
