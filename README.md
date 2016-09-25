@@ -30,4 +30,4 @@ After running MFmask, there will be an image called XXXMFmask that can be opened
 255 => no observation
 
 One sample data can be download from the following link:
-https://pan.baidu.com/disk/
+https://pan.baidu.com/s/1bYENpk
