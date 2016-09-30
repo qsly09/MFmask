@@ -6,7 +6,7 @@ The MFmask can provide cloud and cloud shadow detection at similar (or slightly 
 Please contact Shi Qiu (qsly09@hotmail.com) at School of Resources and Environment, University of Electronic Science and Technology of China if you have any questions.
 Please cite the following papers:
 
-paper 1: Shi Q., Binbin H., Zhe Z., Zhanmang L., Cloud and cloud shadow detection in mountainous area for Landsat 4-8 images, submitted to Remote Sensing of Environment.
+paper 1: Shi Q., Binbin H., Zhe Z., Zhanmang L. and Xingwen Q., Cloud and cloud shadow detection in mountainous area for Landsat 4-8 images, submitted to Remote Sensing of Environment.
 
 paper 2: Zhu, Z. and Woodcock, C. E., Improvement and Expansion of the Fmask Algorithm: Cloud, Cloud Shadow, and Snow Detection for Landsats 4-7, 8, and Sentinel 2 images, Remote Sensing of Environment (2014) doi:10.1016/j.rse.2014.12.014 (paper for Fmask version 3.2.).
 
