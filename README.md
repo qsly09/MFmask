@@ -29,5 +29,10 @@ After running MFmask, there will be an image called XXXMFmask that can be opened
 
 255 => no observation
 
-One sample data can be download from the following link:
-https://pan.baidu.com/s/1bYENpk
+One sample data can be download from the following links:
+
+Google drive: https://drive.google.com/drive/folders/0B1UcOl384wK-S1hNU0g3UlpGQ2s
+
+or
+
+Baidu drive:https://pan.baidu.com/s/1bYENpk
