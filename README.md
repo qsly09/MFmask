@@ -52,7 +52,7 @@ Table 1. Validation data for MFmask. Note that * indicates the reference image w
  <col class=xl7328235 width=162 style='mso-width-source:userset;mso-width-alt:
  5655;width:122pt'>
  <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl6528235 width=13 style='height:15.0pt;width:10pt'>c</td>
+  <td height=20 class=xl6528235 width=13 style='height:15.0pt;width:10pt'> </td>
   <td class=xl6728235 width=92 style='width:69pt'>Type</td>
   <td class=xl6728235 width=77 style='width:58pt'>Name</td>
   <td class=xl6728235 width=102 style='width:77pt'>Date</td>
