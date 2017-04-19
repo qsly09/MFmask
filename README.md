@@ -33,75 +33,645 @@ or
 Baidu drive:https://pan.baidu.com/s/1bYENpk
 
 
+
 Table 1. Validation data for MFmask. Note that * indicates the reference image with both manual cloud and cloud shadow mask. All of them are availble at the following link: http://landsat.usgs.gov/ccavds.php.
-------------------------------------------------------------------------------------------------------------
-    Type         Name(Path_Row)    Date    Sun Elevation(°)  True Cloud Cover (%)   Elevation Difference (m)
-------------------------------------------------------------------------------------------------------------
-   austral         p227_r98      2001/11/3      41.19             0.4510                     1564
-   austral         p228_r94      2001/12/12     50.72             0.9592                     702
-   austral         p228_r97      2001/11/26     46.90             0.6789                     630
-   austral         p228_r98      2001/1/26      40.91             0.9950                     1553
-   austral         p229_r97      2001/12/3      47.55             0.4205                     900
-*  austral         p230_r92      2001/12/26     51.62             0.0232                     885
-*  austral         p230_r94      2001/12/26     49.91             0.1246                     1585
-   austral         p230_r95      2001/12/10     49.79             0.5540                     1830
-   austral         p231_r96      2001/1/31      41.64             0.8710                     2799
-   austral         p74_r92       2001/11/3      47.98             0.2021                     1066
-   austral         p75_r92       2001/11/26     51.98             0.4345                     1583
-   austral         p76_r92       2001/1/17      48.38             0.6832                     1460
-   boreal          p139_r24      2001/8/7       51.06             0.0753                     1621
-   boreal          p143_r21_2    2001/5/31      53.82             0.4559                     625
-*  boreal          p143_r21_3    2001/8/3       48.95             0.1464                     627
-*  boreal          p195_r26      2001/5/11      55.42             0.0718                     854
-*  boreal          p49_r22       2001/6/13      55.96             0.0932                     1009
-   boreal          p54_r19       2001/6/16      52.84             0.6098                     1420
-   mid-latitude_N  p111_r29      2001/4/29      55.09             0.6287                     977
-   mid-latitude_N  p139_r33      2001/5/19      63.07             0.0000                     3204
-   mid-latitude_N  p147_r35      2001/5/11      63.03             0.0675                     3678
-   mid-latitude_N  p154_r34      2001/7/31      60.87             0.0000                     1968
-   mid-latitude_N  p184_r37      2001/6/15      66.50             0.0000                     558
-   mid-latitude_N  p186_r32_1    2001/2/21      33.88             0.3346                     1714
-   mid-latitude_N  p186_r32_2    2001/5/12      61.10             0.0771                     1703
-   mid-latitude_N  p186_r32_4    2001/10/3      41.91             0.0049                     1703
-   mid-latitude_N  p196_r35      2001/4/16      56.59             0.0000                     1339
-   mid-latitude_N  p33_r37       2001/4/26      61.07             0.0295                     1592
-   mid-latitude_N  p36_r37       2001/5/1       62.29             0.0000                     1698
-   mid-latitude_N  p46_r32       2001/6/8       64.33             0.5684                     1530
-*  mid-latitude_S  p171_r82      2001/11/11     58.60             0.0676                     1267
-*  mid-latitude_S  p71_r87       2001/10/29     51.87             0.0814                     1003
-   mid-latitude_S  p72_r88       2001/1/5       53.58             0.1463                     1215
-   mid-latitude_S  p72_r89       2001/2/6       46.53             0.0209                     645
-   mid-latitude_S  p73_r89       2001/12/30     53.43             0.0177                     1852
-   mid-latitude_S  p73_r90       2001/12/14     54.11             0.2938                     1424
-*  mid-latitude_S  p74_r91       2001/11/3      49.04             0.3153                     1705
-   mid-latitude_S  p89_r82       2001/11/12     58.80             0.0099                     1337
-   mid-latitude_S  p92_r86       2001/10/16     49.22             0.6317                     1454
-   polar_north     p197_r14      2001/6/26      47.06             0.1897                     1149
-   polar_north     p61_r2        2000/6/14      32.24             0.0141                     1700
-*  subtropical_N   p118_r40      2001/7/3       65.82             0.1811                     987
-   subtropical_N   p131_r46      2001/9/16      59.49             0.5204                     1358
-   subtropical_N   p142_r48      2001/4/22      63.88             0.0074                     1041
-   subtropical_N   p148_r42      2001/5/2       64.64             0.0000                     534
-*  subtropical_N   p189_r47      2001/8/5       62.92             0.1207                     1106
-*  subtropical_N   p26_r46       2001/3/24      57.00             0.0848                     3200
-*  subtropical_N   p31_r43       2001/6/15      66.29             0.1693                     2667
-*  subtropical_N   p35_r42       2001/8/14      62.20             0.0331                     858
-*  subtropical_S   p1_r75        2001/2/5       55.37             0.0424                     4845
-   subtropical_S   p1_r76        2001/11/20     62.13             0.0141                     3106
-   subtropical_S   p113_r75      2001/1/5       58.62             0.2207                     880
-   subtropical_S   p158_r72_1    2001/3/21      52.39             0.3076                     1259
-*  subtropical_S   p158_r72_2    2001/4/22      46.98             0.1048                     1260
-   subtropical_S   p158_r72_3    2001/9/13      52.54             0.5538                     1260
-   subtropical_S   p158_r72_4    2001/11/16     62.79             0.4300                     1260
-   subtropical_S   p177_r80      2001/10/20     55.92             0.0766                     1000
-   subtropical_S   p179_r75      2001/2/20      53.84             0.0000                     1430
-   subtropical_S   p216_r74      2001/12/8      61.24             0.4264                     1471
-   subtropical_S   p230_r79      2001/2/9       53.15             0.0594                     998
-   subtropical_S   p232_r79      2001/11/6      59.99             0.0049                     4934
-   tropical        p11_r55       2001/6/3       59.05             0.9563                     1105
-   tropical        p116_r50      2001/4/16      63.01             0.1367                     983
-   tropical        p184_r55      2001/7/17      57.73             0.9208                     1117
-   tropical        p184_r63      2001/12/8      56.94             0.8923                     607
-   tropical        p190_r54      2001/9/29      61.57             0.3497                     527
-   tropical        p4_r70        2001/2/26      55.53             0.8775                     2706
-------------------------------------------------------------------------------------------------------------
+<table border=0 cellpadding=0 cellspacing=0 width=707 class=xl6528235
+ style='border-collapse:collapse;table-layout:fixed;width:533pt'>
+ <col class=xl6528235 width=13 style='mso-width-source:userset;mso-width-alt:
+ 465;width:10pt'>
+ <col class=xl6528235 width=92 style='mso-width-source:userset;mso-width-alt:
+ 3211;width:69pt'>
+ <col class=xl6528235 width=77 style='mso-width-source:userset;mso-width-alt:
+ 2699;width:58pt'>
+ <col class=xl7028235 width=102 style='mso-width-source:userset;mso-width-alt:
+ 3560;width:77pt'>
+ <col class=xl6828235 width=110 style='mso-width-source:userset;mso-width-alt:
+ 3840;width:83pt'>
+ <col class=xl6828235 width=151 style='mso-width-source:userset;mso-width-alt:
+ 5282;width:114pt'>
+ <col class=xl7328235 width=162 style='mso-width-source:userset;mso-width-alt:
+ 5655;width:122pt'>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl6528235 width=13 style='height:15.0pt;width:10pt'>c</td>
+  <td class=xl6728235 width=92 style='width:69pt'>Type</td>
+  <td class=xl6728235 width=77 style='width:58pt'>Name</td>
+  <td class=xl6728235 width=102 style='width:77pt'>Date</td>
+  <td class=xl6728235 width=110 style='width:83pt'>Sun Elevation(&deg;)</td>
+  <td class=xl6728235 width=151 style='width:114pt'>True Cloud Cover (%)</td>
+  <td class=xl6728235 width=162 style='width:122pt'>Elevation Difference (m)</td>
+ </tr>
+ <tr class=xl8028235 height=19 style='height:14.5pt'>
+  <td height=19 class=xl8028235 style='height:14.5pt'>&nbsp;</td>
+  <td class=xl6628235>austral</td>
+  <td class=xl6628235>p227_r98</td>
+  <td class=xl6928235>2001/11/3</td>
+  <td class=xl7128235>41.19</td>
+  <td class=xl7228235>0.4510</td>
+  <td class=xl7328235>1564</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>austral</td>
+  <td class=xl6628235>p228_r94</td>
+  <td class=xl6928235>2001/12/12</td>
+  <td class=xl7128235>50.72</td>
+  <td class=xl7228235>0.9592</td>
+  <td class=xl7328235>702</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>austral</td>
+  <td class=xl6628235>p228_r97</td>
+  <td class=xl6928235>2001/11/26</td>
+  <td class=xl7128235>46.90</td>
+  <td class=xl7228235>0.6789</td>
+  <td class=xl7328235>630</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>austral</td>
+  <td class=xl6628235>p228_r98</td>
+  <td class=xl6928235>2001/1/26</td>
+  <td class=xl7128235>40.91</td>
+  <td class=xl7228235>0.9950</td>
+  <td class=xl7328235>1553</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>austral</td>
+  <td class=xl6628235>p229_r97</td>
+  <td class=xl6928235>2001/12/3</td>
+  <td class=xl7128235>47.55</td>
+  <td class=xl7228235>0.4205</td>
+  <td class=xl7328235>900</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'>*</td>
+  <td class=xl7528235>austral</td>
+  <td class=xl7528235>p230_r92</td>
+  <td class=xl7628235>2001/12/26</td>
+  <td class=xl7728235>51.62</td>
+  <td class=xl7828235>0.0232</td>
+  <td class=xl7928235>885</td>
+ </tr>
+ <tr class=xl8028235 height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'>*</td>
+  <td class=xl7528235>austral</td>
+  <td class=xl7528235>p230_r94</td>
+  <td class=xl7628235>2001/12/26</td>
+  <td class=xl7728235>49.91</td>
+  <td class=xl7828235>0.1246</td>
+  <td class=xl7928235>1585</td>
+ </tr>
+ <tr class=xl6528235 height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>austral</td>
+  <td class=xl6628235>p230_r95</td>
+  <td class=xl6928235>2001/12/10</td>
+  <td class=xl7128235>49.79</td>
+  <td class=xl7228235>0.5540</td>
+  <td class=xl7328235>1830</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>austral</td>
+  <td class=xl6628235>p231_r96</td>
+  <td class=xl6928235>2001/1/31</td>
+  <td class=xl7128235>41.64</td>
+  <td class=xl7228235>0.8710</td>
+  <td class=xl7328235>2799</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>austral</td>
+  <td class=xl6628235>p74_r92</td>
+  <td class=xl6928235>2001/11/3</td>
+  <td class=xl7128235>47.98</td>
+  <td class=xl7228235>0.2021</td>
+  <td class=xl7328235>1066</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>austral</td>
+  <td class=xl6628235>p75_r92</td>
+  <td class=xl6928235>2001/11/26</td>
+  <td class=xl7128235>51.98</td>
+  <td class=xl7228235>0.4345</td>
+  <td class=xl7328235>1583</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>austral</td>
+  <td class=xl6628235>p76_r92</td>
+  <td class=xl6928235>2001/1/17</td>
+  <td class=xl7128235>48.38</td>
+  <td class=xl7228235>0.6832</td>
+  <td class=xl7328235>1460</td>
+ </tr>
+ <tr class=xl8028235 height=19 style='height:14.5pt'>
+  <td height=19 class=xl8028235 style='height:14.5pt'>&nbsp;</td>
+  <td class=xl6628235>boreal</td>
+  <td class=xl6628235>p139_r24</td>
+  <td class=xl6928235>2001/8/7</td>
+  <td class=xl7128235>51.06</td>
+  <td class=xl7228235>0.0753</td>
+  <td class=xl7328235>1621</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>boreal</td>
+  <td class=xl6628235>p143_r21_2</td>
+  <td class=xl6928235>2001/5/31</td>
+  <td class=xl7128235>53.82</td>
+  <td class=xl7228235>0.4559</td>
+  <td class=xl7328235>625</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'>*</td>
+  <td class=xl7528235>boreal</td>
+  <td class=xl7528235>p143_r21_3</td>
+  <td class=xl7628235>2001/8/3</td>
+  <td class=xl7728235>48.95</td>
+  <td class=xl7828235>0.1464</td>
+  <td class=xl7928235>627</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'>*</td>
+  <td class=xl7528235>boreal</td>
+  <td class=xl7528235>p195_r26</td>
+  <td class=xl7628235>2001/5/11</td>
+  <td class=xl7728235>55.42</td>
+  <td class=xl7828235>0.0718</td>
+  <td class=xl7928235>854</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'>*</td>
+  <td class=xl7528235>boreal</td>
+  <td class=xl7528235>p49_r22</td>
+  <td class=xl7628235>2001/6/13</td>
+  <td class=xl7728235>55.96</td>
+  <td class=xl7828235>0.0932</td>
+  <td class=xl7928235>1009</td>
+ </tr>
+ <tr class=xl8028235 height=19 style='height:14.5pt'>
+  <td height=19 class=xl8028235 style='height:14.5pt'>&nbsp;</td>
+  <td class=xl6628235>boreal</td>
+  <td class=xl6628235>p54_r19</td>
+  <td class=xl6928235>2001/6/16</td>
+  <td class=xl7128235>52.84</td>
+  <td class=xl7228235>0.6098</td>
+  <td class=xl7328235>1420</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>mid-latitude_N</td>
+  <td class=xl6628235>p111_r29</td>
+  <td class=xl6928235>2001/4/29</td>
+  <td class=xl7128235>55.09</td>
+  <td class=xl7228235>0.6287</td>
+  <td class=xl7328235>977</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>mid-latitude_N</td>
+  <td class=xl6628235>p139_r33</td>
+  <td class=xl6928235>2001/5/19</td>
+  <td class=xl7128235>63.07</td>
+  <td class=xl7228235>0.0000</td>
+  <td class=xl7328235>3204</td>
+ </tr>
+ <tr class=xl8028235 height=19 style='height:14.5pt'>
+  <td height=19 class=xl8028235 style='height:14.5pt'>&nbsp;</td>
+  <td class=xl6628235>mid-latitude_N</td>
+  <td class=xl6628235>p147_r35</td>
+  <td class=xl6928235>2001/5/11</td>
+  <td class=xl7128235>63.03</td>
+  <td class=xl7228235>0.0675</td>
+  <td class=xl7328235>3678</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>mid-latitude_N</td>
+  <td class=xl6628235>p154_r34</td>
+  <td class=xl6928235>2001/7/31</td>
+  <td class=xl7128235>60.87</td>
+  <td class=xl7228235>0.0000</td>
+  <td class=xl7328235>1968</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>mid-latitude_N</td>
+  <td class=xl6628235>p184_r37</td>
+  <td class=xl6928235>2001/6/15</td>
+  <td class=xl7128235>66.50</td>
+  <td class=xl7228235>0.0000</td>
+  <td class=xl7328235>558</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>mid-latitude_N</td>
+  <td class=xl6628235>p186_r32_1</td>
+  <td class=xl6928235>2001/2/21</td>
+  <td class=xl7128235>33.88</td>
+  <td class=xl7228235>0.3346</td>
+  <td class=xl7328235>1714</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>mid-latitude_N</td>
+  <td class=xl6628235>p186_r32_2</td>
+  <td class=xl6928235>2001/5/12</td>
+  <td class=xl7128235>61.10</td>
+  <td class=xl7228235>0.0771</td>
+  <td class=xl7328235>1703</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>mid-latitude_N</td>
+  <td class=xl6628235>p186_r32_4</td>
+  <td class=xl6928235>2001/10/3</td>
+  <td class=xl7128235>41.91</td>
+  <td class=xl7228235>0.0049</td>
+  <td class=xl7328235>1703</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>mid-latitude_N</td>
+  <td class=xl6628235>p196_r35</td>
+  <td class=xl6928235>2001/4/16</td>
+  <td class=xl7128235>56.59</td>
+  <td class=xl7228235>0.0000</td>
+  <td class=xl7328235>1339</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>mid-latitude_N</td>
+  <td class=xl6628235>p33_r37</td>
+  <td class=xl6928235>2001/4/26</td>
+  <td class=xl7128235>61.07</td>
+  <td class=xl7228235>0.0295</td>
+  <td class=xl7328235>1592</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>mid-latitude_N</td>
+  <td class=xl6628235>p36_r37</td>
+  <td class=xl6928235>2001/5/1</td>
+  <td class=xl7128235>62.29</td>
+  <td class=xl7228235>0.0000</td>
+  <td class=xl7328235>1698</td>
+ </tr>
+ <tr class=xl8028235 height=19 style='height:14.5pt'>
+  <td height=19 class=xl8028235 style='height:14.5pt'>&nbsp;</td>
+  <td class=xl6628235>mid-latitude_N</td>
+  <td class=xl6628235>p46_r32</td>
+  <td class=xl6928235>2001/6/8</td>
+  <td class=xl7128235>64.33</td>
+  <td class=xl7428235>56.84%</td>
+  <td class=xl7328235>1530</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'>*</td>
+  <td class=xl7528235>mid-latitude_S</td>
+  <td class=xl7528235>p171_r82</td>
+  <td class=xl7628235>2001/11/11</td>
+  <td class=xl7728235>58.60</td>
+  <td class=xl7828235>0.0676</td>
+  <td class=xl7928235>1267</td>
+ </tr>
+ <tr class=xl8028235 height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'>*</td>
+  <td class=xl7528235>mid-latitude_S</td>
+  <td class=xl7528235>p71_r87</td>
+  <td class=xl7628235>2001/10/29</td>
+  <td class=xl7728235>51.87</td>
+  <td class=xl7828235>0.0814</td>
+  <td class=xl7928235>1003</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>mid-latitude_S</td>
+  <td class=xl6628235>p72_r88</td>
+  <td class=xl6928235>2001/1/5</td>
+  <td class=xl7128235>53.58</td>
+  <td class=xl7228235>0.1463</td>
+  <td class=xl7328235>1215</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>mid-latitude_S</td>
+  <td class=xl6628235>p72_r89</td>
+  <td class=xl6928235>2001/2/6</td>
+  <td class=xl7128235>46.53</td>
+  <td class=xl7228235>0.0209</td>
+  <td class=xl7328235>645</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>mid-latitude_S</td>
+  <td class=xl6628235>p73_r89</td>
+  <td class=xl6928235>2001/12/30</td>
+  <td class=xl7128235>53.43</td>
+  <td class=xl7228235>0.0177</td>
+  <td class=xl7328235>1852</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>mid-latitude_S</td>
+  <td class=xl6628235>p73_r90</td>
+  <td class=xl6928235>2001/12/14</td>
+  <td class=xl7128235>54.11</td>
+  <td class=xl7228235>0.2938</td>
+  <td class=xl7328235>1424</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'>*</td>
+  <td class=xl7528235>mid-latitude_S</td>
+  <td class=xl7528235>p74_r91</td>
+  <td class=xl7628235>2001/11/3</td>
+  <td class=xl7728235>49.04</td>
+  <td class=xl7828235>0.3153</td>
+  <td class=xl7928235>1705</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>mid-latitude_S</td>
+  <td class=xl6628235>p89_r82</td>
+  <td class=xl6928235>2001/11/12</td>
+  <td class=xl7128235>58.80</td>
+  <td class=xl7228235>0.0099</td>
+  <td class=xl7328235>1337</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>mid-latitude_S</td>
+  <td class=xl6628235>p92_r86</td>
+  <td class=xl6928235>2001/10/16</td>
+  <td class=xl7128235>49.22</td>
+  <td class=xl7228235>0.6317</td>
+  <td class=xl7328235>1454</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>polar_north</td>
+  <td class=xl6628235>p197_r14</td>
+  <td class=xl6928235>2001/6/26</td>
+  <td class=xl7128235>47.06</td>
+  <td class=xl7228235>0.1897</td>
+  <td class=xl7328235>1149</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>polar_north</td>
+  <td class=xl6628235>p61_r2</td>
+  <td class=xl6928235>2000/6/14</td>
+  <td class=xl7128235>32.24</td>
+  <td class=xl7228235>0.0141</td>
+  <td class=xl7328235>1700</td>
+ </tr>
+ <tr class=xl8028235 height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'>*</td>
+  <td class=xl7528235>subtropical_N</td>
+  <td class=xl7528235>p118_r40</td>
+  <td class=xl7628235>2001/7/3</td>
+  <td class=xl7728235>65.82</td>
+  <td class=xl7828235>0.1811</td>
+  <td class=xl7928235>987</td>
+ </tr>
+ <tr class=xl8028235 height=19 style='height:14.5pt'>
+  <td height=19 class=xl8028235 style='height:14.5pt'>&nbsp;</td>
+  <td class=xl6628235>subtropical_N</td>
+  <td class=xl6628235>p131_r46</td>
+  <td class=xl6928235>2001/9/16</td>
+  <td class=xl7128235>59.49</td>
+  <td class=xl7228235>0.5204</td>
+  <td class=xl7328235>1358</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>subtropical_N</td>
+  <td class=xl6628235>p142_r48</td>
+  <td class=xl6928235>2001/4/22</td>
+  <td class=xl7128235>63.88</td>
+  <td class=xl7228235>0.0074</td>
+  <td class=xl7328235>1041</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>subtropical_N</td>
+  <td class=xl6628235>p148_r42</td>
+  <td class=xl6928235>2001/5/2</td>
+  <td class=xl7128235>64.64</td>
+  <td class=xl7228235>0.0000</td>
+  <td class=xl7328235>534</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'>*</td>
+  <td class=xl7528235>subtropical_N</td>
+  <td class=xl7528235>p189_r47</td>
+  <td class=xl7628235>2001/8/5</td>
+  <td class=xl7728235>62.92</td>
+  <td class=xl7828235>0.1207</td>
+  <td class=xl7928235>1106</td>
+ </tr>
+ <tr class=xl8028235 height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'>*</td>
+  <td class=xl7528235>subtropical_N</td>
+  <td class=xl7528235>p26_r46</td>
+  <td class=xl7628235>2001/3/24</td>
+  <td class=xl7728235>57.00</td>
+  <td class=xl7828235>0.0848</td>
+  <td class=xl7928235>3200</td>
+ </tr>
+ <tr class=xl8028235 height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'>*</td>
+  <td class=xl7528235>subtropical_N</td>
+  <td class=xl7528235>p31_r43</td>
+  <td class=xl7628235>2001/6/15</td>
+  <td class=xl7728235>66.29</td>
+  <td class=xl7828235>0.1693</td>
+  <td class=xl7928235>2667</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'>*</td>
+  <td class=xl7528235>subtropical_N</td>
+  <td class=xl7528235>p35_r42</td>
+  <td class=xl7628235>2001/8/14</td>
+  <td class=xl7728235>62.20</td>
+  <td class=xl7828235>0.0331</td>
+  <td class=xl7928235>858</td>
+ </tr>
+ <tr class=xl8028235 height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'>*</td>
+  <td class=xl7528235>subtropical_S</td>
+  <td class=xl7528235>p1_r75</td>
+  <td class=xl7628235>2001/2/5</td>
+  <td class=xl7728235>55.37</td>
+  <td class=xl7828235>0.0424</td>
+  <td class=xl7928235>4845</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>subtropical_S</td>
+  <td class=xl6628235>p1_r76</td>
+  <td class=xl6928235>2001/11/20</td>
+  <td class=xl7128235>62.13</td>
+  <td class=xl7228235>0.0141</td>
+  <td class=xl7328235>3106</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>subtropical_S</td>
+  <td class=xl6628235>p113_r75</td>
+  <td class=xl6928235>2001/1/5</td>
+  <td class=xl7128235>58.62</td>
+  <td class=xl7228235>0.2207</td>
+  <td class=xl7328235>880</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>subtropical_S</td>
+  <td class=xl6628235>p158_r72_1</td>
+  <td class=xl6928235>2001/3/21</td>
+  <td class=xl7128235>52.39</td>
+  <td class=xl7228235>0.3076</td>
+  <td class=xl7328235>1259</td>
+ </tr>
+ <tr class=xl8028235 height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'>*</td>
+  <td class=xl7528235>subtropical_S</td>
+  <td class=xl7528235>p158_r72_2</td>
+  <td class=xl7628235>2001/4/22</td>
+  <td class=xl7728235>46.98</td>
+  <td class=xl7828235>0.1048</td>
+  <td class=xl7928235>1260</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>subtropical_S</td>
+  <td class=xl6628235>p158_r72_3</td>
+  <td class=xl6928235>2001/9/13</td>
+  <td class=xl7128235>52.54</td>
+  <td class=xl7228235>0.5538</td>
+  <td class=xl7328235>1260</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>subtropical_S</td>
+  <td class=xl6628235>p158_r72_4</td>
+  <td class=xl6928235>2001/11/16</td>
+  <td class=xl7128235>62.79</td>
+  <td class=xl7228235>0.4300</td>
+  <td class=xl7328235>1260</td>
+ </tr>
+ <tr class=xl8028235 height=19 style='height:14.5pt'>
+  <td height=19 class=xl8028235 style='height:14.5pt'>&nbsp;</td>
+  <td class=xl6628235>subtropical_S</td>
+  <td class=xl6628235>p177_r80</td>
+  <td class=xl6928235>2001/10/20</td>
+  <td class=xl7128235>55.92</td>
+  <td class=xl7228235>0.0766</td>
+  <td class=xl7328235>1000</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>subtropical_S</td>
+  <td class=xl6628235>p179_r75</td>
+  <td class=xl6928235>2001/2/20</td>
+  <td class=xl7128235>53.84</td>
+  <td class=xl7228235>0.0000</td>
+  <td class=xl7328235>1430</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>subtropical_S</td>
+  <td class=xl6628235>p216_r74</td>
+  <td class=xl6928235>2001/12/8</td>
+  <td class=xl7128235>61.24</td>
+  <td class=xl7228235>0.4264</td>
+  <td class=xl7328235>1471</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>subtropical_S</td>
+  <td class=xl6628235>p230_r79</td>
+  <td class=xl6928235>2001/2/9</td>
+  <td class=xl7128235>53.15</td>
+  <td class=xl7228235>0.0594</td>
+  <td class=xl7328235>998</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>subtropical_S</td>
+  <td class=xl6628235>p232_r79</td>
+  <td class=xl6928235>2001/11/6</td>
+  <td class=xl7128235>59.99</td>
+  <td class=xl7228235>0.0049</td>
+  <td class=xl7328235>4934</td>
+ </tr>
+ <tr class=xl8028235 height=19 style='height:14.5pt'>
+  <td height=19 class=xl8028235 style='height:14.5pt'>&nbsp;</td>
+  <td class=xl6628235>tropical</td>
+  <td class=xl6628235>p11_r55</td>
+  <td class=xl6928235>2001/6/3</td>
+  <td class=xl7128235>59.05</td>
+  <td class=xl7228235>0.9563</td>
+  <td class=xl7328235>1105</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>tropical</td>
+  <td class=xl6628235>p116_r50</td>
+  <td class=xl6928235>2001/4/16</td>
+  <td class=xl7128235>63.01</td>
+  <td class=xl7228235>0.1367</td>
+  <td class=xl7328235>983</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>tropical</td>
+  <td class=xl6628235>p184_r55</td>
+  <td class=xl6928235>2001/7/17</td>
+  <td class=xl7128235>57.73</td>
+  <td class=xl7228235>0.9208</td>
+  <td class=xl7328235>1117</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>tropical</td>
+  <td class=xl6628235>p184_r63</td>
+  <td class=xl6928235>2001/12/8</td>
+  <td class=xl7128235>56.94</td>
+  <td class=xl7228235>0.8923</td>
+  <td class=xl7328235>607</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>tropical</td>
+  <td class=xl6628235>p190_r54</td>
+  <td class=xl6928235>2001/9/29</td>
+  <td class=xl7128235>61.57</td>
+  <td class=xl7228235>0.3497</td>
+  <td class=xl7328235>527</td>
+ </tr>
+ <tr height=19 style='height:14.5pt'>
+  <td height=19 class=xl6528235 style='height:14.5pt'></td>
+  <td class=xl6628235>tropical</td>
+  <td class=xl6628235>p4_r70</td>
+  <td class=xl6928235>2001/2/26</td>
+  <td class=xl7128235>55.53</td>
+  <td class=xl7228235>0.8775</td>
+  <td class=xl7328235>2706</td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=13 style='width:10pt'></td>
+  <td width=92 style='width:69pt'></td>
+  <td width=77 style='width:58pt'></td>
+  <td width=102 style='width:77pt'></td>
+  <td width=110 style='width:83pt'></td>
+  <td width=151 style='width:114pt'></td>
+  <td width=162 style='width:122pt'></td>
+ </tr>
+ <![endif]>
+</table>
