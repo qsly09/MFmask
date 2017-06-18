@@ -4,7 +4,7 @@
 Please contact Shi Qiu (qsly09@hotmail.com) at School of Resources and Environment, University of Electronic Science and Technology of China if you have any questions.
 Please cite the following papers:
 
-paper 1: Qiu, S., He, B., Zhu, Z., Liao, Z.,and Quan,X., Improving Fmask cloud and cloud shadow detection in mountainous area for Landsats 4-8 images, Remote Sensing of Environment, Accepted.
+paper 1: Qiu, S., He, B., Zhu, Z., Liao, Z.,and Quan,X., Improving Fmask cloud and cloud shadow detection in mountainous area for Landsats 4-8 images, Remote Sensing of Environment, Accepted (paper for MFmask version 1.0.).
 
 paper 2: Zhu, Z. and Woodcock, C. E., Improvement and Expansion of the Fmask Algorithm: Cloud, Cloud Shadow, and Snow Detection for Landsats 4-7, 8, and Sentinel 2 images, Remote Sensing of Environment (2014) doi:10.1016/j.rse.2014.12.014 (paper for Fmask version 3.2.).
 
