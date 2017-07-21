@@ -39,7 +39,7 @@ Baidu drive:https://pan.baidu.com/s/1bYENpk
 
 
 
-Table 1. Validation data for MFmask. Note that * indicates the reference image with both manual cloud and cloud shadow mask. All of them are availble at the following link: http://landsat.usgs.gov/ccavds.php.
+Table 1. Validation data for MFmask. Note that * indicates the reference image with both manual cloud and cloud shadow mask. All of them are availble at the following link: https://landsat.usgs.gov/landsat-7-cloud-cover-assessment-validation-data.
 <table border=0 cellpadding=0 cellspacing=0 width=707 class=xl6528235
  style='border-collapse:collapse;table-layout:fixed;width:533pt'>
  <col class=xl6528235 width=13 style='mso-width-source:userset;mso-width-alt:
