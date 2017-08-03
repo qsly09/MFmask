@@ -9,11 +9,11 @@ Note that the corresponding DEM data for each Landsat image needs to bemanually 
 Please contact Shi Qiu (qsly09@hotmail.com) at School of Resources and Environment, University of Electronic Science and Technology of China if you have any questions.
 Please cite the following papers:
 
-paper 1: Qiu, S., He, B., Zhu, Z., Liao, Z., & Quan,X. (2017). Improving Fmask cloud and cloud shadow detection in mountainous area for Landsats 4-8 images, Remote Sensing of Environment, 199, 107-119. doi:10.1016/j.rse.2017.07.002 (paper for MFmask version 1.0.).
+paper 1: Qiu, S., He, B., Zhu, Z., Liao, Z., and Quan, X. (2017). Improving Fmask cloud and cloud shadow detection in mountainous area for Landsats 4-8 images, Remote Sensing of Environment, 199, 107-119. doi:10.1016/j.rse.2017.07.002 (paper for MFmask version 1.0.).
 
-paper 2: Zhu, Z., Wang, S., & Woodcock, C. E. (2015). Improvement and expansion of the fmask algorithm: cloud, cloud shadow, and snow detection for landsats 4–7, 8, and sentinel 2 images. Remote Sensing of Environment, 159, 269-277. doi:10.1016/j.rse.2014.12.014 (paper for Fmask version 3.2.).
+paper 2: Zhu, Z., Wang, S., and Woodcock, C. E. (2015). Improvement and expansion of the fmask algorithm: cloud, cloud shadow, and snow detection for landsats 4–7, 8, and sentinel 2 images. Remote Sensing of Environment, 159, 269-277. doi:10.1016/j.rse.2014.12.014 (paper for Fmask version 3.2.).
 
-paper 3: Zhu, Z. and Woodcock, C. E., Zhu, Z., & Woodcock, C. E. (2012). Object-based cloud and cloud shadow detection in landsat imagery. Remote Sensing of Environment, 118(6), 83-94. doi:10.1016/j.rse.2011.10.028 (paper for Fmask version 1.6.).
+paper 3: Zhu, Z. and Woodcock, C. E. (2012). Object-based cloud and cloud shadow detection in landsat imagery. Remote Sensing of Environment, 118(6), 83-94. doi:10.1016/j.rse.2011.10.028 (paper for Fmask version 1.6.).
 
 After running MFmask, there will be an image called XXXMFmask that can be opened by ENVI. The image values are presenting the following classes:
 
