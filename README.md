@@ -10,7 +10,7 @@ If you HAVE Matlab higher than R2017a and workable network, just run the MFmask 
 If you HAVE NOT Matlab higher than R2017a or workable network, but you still want to use DEMs to enhance the cloud and cloud shadow detection, please manually download, project, and resample to Landsat's resolution and extent, and resaved the DEM data as a TIFF file named with end of ‘_dem.TIF’.
 Available DEMs can be found as follows, ASTER 30m (1 arc-second) DEM data: http://dx.doi.org/10.5067/aster/astgtm.002. SRTM 30m (1 arc second) DEM data: https://doi.org/10.5067/measures/srtm/srtmgl1.003. Note that the corresponding DEM data for each Landsat image needs to bemanually downloaded, mosaicked, projected, and resampled to Landsat's resolution andextent. DEM derivatives (e.g., slope and aspect) are also calculated by using other software, such as ENVI, ERDAS, and ArcMap.
 
-If you CANNOT automatedly or manually obtain DEMs, MFmask still works well without DEMs. It will directly come back to the routine of Fmask, but also improve the cloud shadow location prediction with aid of neighboring clouds. That means MFmask will also generate similar cloud masks and better cloud shadow masks without DEMs, compared with original Fmask.
+If you CANNOT automatedly or manually obtain DEMs, MFmask still works well. It will directly come back to the routine of Fmask, but also improve the cloud shadow location prediction with aid of neighboring clouds. That means MFmask will also generate similar cloud masks and better cloud shadow masks without DEMs, compared with original Fmask.
 
 
 Please contact Shi Qiu (qsly09@hotmail.com) at School of Resources and Environment, University of Electronic Science and Technology of China if you have any questions.
