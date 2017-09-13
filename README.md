@@ -1,10 +1,16 @@
 # MFmask
- The software called MFmask (Matlab package) is used for automated clouds, cloud shadows, and snow masking for Landsat 4-8 images. The MFmask is developed by integrating Digital Elevation Models (DEMs) into the existing Fmask algorithm (Version 3.3; https://github.com/prs021/fmask). It is specifically designed for Landsat images acquired from mountainous area well (thereafter we call this algorithm MFmask, in which the letter “M” refers to mountainous), and also applicative for Landsat images acquired in non-mountainous areas.
- 
-Available DEMs can be found as follows,
-ASTER 30m (1 arc-second) DEM data: http://dx.doi.org/10.5067/aster/astgtm.002.
-SRTM 30m (1 arc second) DEM data: https://doi.org/10.5067/measures/srtm/srtmgl1.003.
-Note that the corresponding DEM data for each Landsat image needs to bemanually downloaded, mosaicked, projected, and resampled to Landsat's resolution andextent. DEM derivatives (e.g., slope and aspect) are also calculated by using other software, such as ENVI, ERDAS, and ArcMap.
+Great news! MFmask 1.1 beta was publicly released.
+MFmask can AUTOMATEDLY download, project, and resample DEMs to Landsat's resolution and extent, thanking for TopoToolbox (https://topotoolbox.wordpress.com)! What we need to do just keep your network workable and run the MFmask package at Landsat folder. Note that Matlab version MUST be higher than R2017a, OR the corresponding DEM data for each Landsat image still needs to be manually downloaded, mosaicked, projected, and resampled to Landsat's resolution and extent.
+
+The software called MFmask (Matlab package) is used for automated clouds, cloud shadows, and snow masking for Landsat 4-8 images. The MFmask is developed by integrating Digital Elevation Models (DEMs) into the existing Fmask algorithm (Version 3.3; https://github.com/prs021/fmask). It is specifically designed for Landsat images acquired from mountainous area well (thereafter we call this algorithm MFmask, in which the letter “M” refers to mountainous), and also applicative for Landsat images acquired in non-mountainous areas.
+
+If you HAVE Matlab higher than R2017a and workable network, just run the MFmask package at Landsat folder.
+
+If you HAVE NOT Matlab higher than R2017a or workable network, but you still want to use DEMs to enhance the cloud and cloud shadow detection, please manually download, project, and resample to Landsat's resolution and extent, and resaved the DEM data as a TIFF file named with end of ‘_dem.TIF’.
+Available DEMs can be found as follows, ASTER 30m (1 arc-second) DEM data: http://dx.doi.org/10.5067/aster/astgtm.002. SRTM 30m (1 arc second) DEM data: https://doi.org/10.5067/measures/srtm/srtmgl1.003. Note that the corresponding DEM data for each Landsat image needs to bemanually downloaded, mosaicked, projected, and resampled to Landsat's resolution andextent. DEM derivatives (e.g., slope and aspect) are also calculated by using other software, such as ENVI, ERDAS, and ArcMap.
+
+If you CANNOT automatedly or manually obtain DEMs, MFmask still works well without DEMs. It will directly come back to the routine of Fmask, but also improve the cloud shadow location prediction with aid of neighboring clouds. That means MFmask will also generate similar cloud masks and better cloud shadow masks without DEMs, compared with original Fmask.
+
 
 Please contact Shi Qiu (qsly09@hotmail.com) at School of Resources and Environment, University of Electronic Science and Technology of China if you have any questions.
 Please cite the following papers:
