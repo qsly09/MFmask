@@ -1,8 +1,9 @@
 # MFmask
 Great news! MFmask 1.1 beta has been publicly released.
-Now MFmask can AUTOMATEDLY download, project, and resample DEMs to Landsat's resolution and extent, thanking for TopoToolbox (https://topotoolbox.wordpress.com)! What we need to do just keep your network workable and run the MFmask package at Landsat folder. Note that Matlab version MUST be higher than R2017a, OR the corresponding DEM data for each Landsat image still needs to be manually downloaded, mosaicked, projected, and resampled to Landsat's resolution and extent.
 
 The software called MFmask (Matlab package) is used for automated clouds, cloud shadows, and snow masking for Landsat 4-8 images. The MFmask is developed by integrating Digital Elevation Models (DEMs) into the existing Fmask algorithm (Version 3.3; https://github.com/prs021/fmask). It is specifically designed for Landsat images acquired from mountainous area well (thereafter we call this algorithm MFmask, in which the letter “M” refers to mountainous), and also applicative for Landsat images acquired in non-mountainous areas.
+
+Now MFmask can AUTOMATEDLY download, project, and resample DEMs to Landsat's resolution and extent, thanking for TopoToolbox (https://topotoolbox.wordpress.com)! What we need to do just keep your network workable and run the MFmask package at Landsat folder. Note that Matlab version MUST be higher than R2017a, OR the corresponding DEM data for each Landsat image still needs to be manually downloaded, mosaicked, projected, and resampled to Landsat's resolution and extent.
 
 If you HAVE Matlab higher than R2017a and workable network, just run the MFmask package at Landsat folder.
 
