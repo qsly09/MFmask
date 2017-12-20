@@ -5,6 +5,8 @@
 % This minor modification was made because the match similarity may be
 % wrong when some parts of cloud are out of the observations.
 % 
+% fix the bug that this cannot work when the number of cloud objects is
+% less than 14  by Shi. at 20, Dec., 2017.
 % still improve the prediction of cloud shadow location when no DEMs  by Shi. at 13, Sept., 2017
 % revisit the first 12 cloud objects.   by Shi. at 21,Feb.,2017
 % fix the bugger, struct2table for lt. struct2table. at 21,Feb.,2017
@@ -100,12 +102,15 @@ function [ similar_num,data_cloud_matched, data_shadow_matched] = cld2slds_match
         dim_expand=dim+2*dim_expd;
         record_base_h_num=0;
         fprintf('Detecting cloud shadows. This might take some minutes so be patient.\n');
-        num_revisited=num_near;
+        num_revisited = 0;
+        if num > num_near
+            num_revisited=num_near;
+        end
         num_all=num+num_revisited;
         for cloud_type_cur= 1:num_all %num
             % revisit the first 12 cloud objects.
             cloud_type=cloud_type_cur;
-            if cloud_type>num
+            if cloud_type>num && num_revisited<num
                 cloud_type=num-num_revisited;
             end
 %             cloud_object=zeros(dim,'uint8'); 
