@@ -5,6 +5,8 @@
 % by Shi.
 % at 23,Feb.,2017
 %
+% fix the bug that the imfill function will go with errors when including
+% Nan value.     (Shi 12/20/2017)
 % No topo correction when no DEMs (Shi 9/13/2017)
 % fixed the bug of the wrong selection of samples (Shi 2/24/2017)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -22,6 +24,7 @@ function masker_shadow = plshadow2( data_nir,data_swir,data_clear_land,masker_ob
     % estimating background (land) Band 4 ref
     backg_b4=prctile(data_nir(data_clear_land),100*percent_low);
     data_nir(masker_observation==0)=backg_b4;
+    data_nir(isnan(data_nir(:)))=backg_b4;
     clear backg_b4;
     % fill in regional minimum Band 4 ref
     data_nir_filled=imfill(data_nir);
@@ -32,6 +35,7 @@ function masker_shadow = plshadow2( data_nir,data_swir,data_clear_land,masker_ob
     % estimating background (land) Band 4 ref
     backg_b5=prctile(data_swir(data_clear_land),100*percent_low);
     data_swir(masker_observation==0)=backg_b5;
+    data_swir(isnan(data_swir(:)))=backg_b5;
     clear backg_b5;
     clear data_clear_land percent_low;
     % fill in regional minimum Band 5 ref
