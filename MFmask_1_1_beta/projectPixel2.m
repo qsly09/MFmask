@@ -54,6 +54,15 @@ function [dem_plane_r,dem_plane_c]= projectPixel2(dim,dem,dem_base,...
     % recorders.
     tmp_id_plane=sub2ind(dim_plane_expd,double(loc_i_plane_expd),double(loc_j_plane_expd));
     clear loc_i_plane_expd loc_j_plane_expd;
+    
+    % sometimes there may be some Nan values!
+    nan_ids=isnan(tmp_id_plane);
+    if sum(nan_ids(:))>0
+        tmp_id_plane(nan_ids)=[];
+        loc_i(nan_ids)=[];
+        loc_j(nan_ids)=[];
+    end
+    
     dem_plane_r(tmp_id_plane)=loc_i;
     dem_plane_c(tmp_id_plane)=loc_j;
 
