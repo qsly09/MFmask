@@ -9,6 +9,7 @@
 % Nan value.     (Shi 12/20/2017)
 % No topo correction when no DEMs (Shi 9/13/2017)
 % fixed the bug of the wrong selection of samples (Shi 2/24/2017)
+% When c is calculated as Nan, this function will not make the topo correction (Shi 3/8/2018)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function masker_shadow = plshadow2( data_nir,data_swir,data_clear_land,masker_observation,percent_low,...
     sun_zenith_deg,sun_azimuth_deg, slope_data,aspect_data,dim)
@@ -98,7 +99,12 @@ function [data_nir,data_swir] = getDataTopoCorrected(data_nir_ori,data_swir_ori,
 %     figure;plot(double(cos_sita_samples),double(data_samples_nir),'r.');
     c=c_fitted(1,2)/c_fitted(1,1);
     clear c_fitted;
-    data_nir=double(data_nir_ori).*(cos(deg2rad(slope_data)).*sun_zenith_cos+c)./(cos_sita+c);
+    if isnan(c)
+        data_nir=data_nir_ori;
+    else
+        data_nir=double(data_nir_ori).*(cos(deg2rad(slope_data)).*sun_zenith_cos+c)./(cos_sita+c);
+    end
+    % data_nir=double(data_nir_ori).*(cos(deg2rad(slope_data)).*sun_zenith_cos+c)./(cos_sita+c);
     % for SWIR
     data_swir_ori_tmp=data_swir_ori(index_exclude_cloud_water);
     data_samples_swir=data_swir_ori_tmp(samples_ids);
@@ -106,7 +112,11 @@ function [data_nir,data_swir] = getDataTopoCorrected(data_nir_ori,data_swir_ori,
     c_fitted=polyfit(double(cos_sita_samples),double(data_samples_swir),1);
     c=c_fitted(1,2)/c_fitted(1,1);
     clear c_fitted samples_ids;
-    data_swir=double(data_swir_ori).*(cos(deg2rad(slope_data)).*sun_zenith_cos+c)./(cos_sita+c);
+    if isnan(c)
+        data_swir=data_swir_ori;
+    else
+        data_swir=double(data_swir_ori).*(cos(deg2rad(slope_data)).*sun_zenith_cos+c)./(cos_sita+c);
+    end
 end
 % % CSC+C
 % function [data_corected,mm] = getDataTopoCorrected(data_ori,data_ori1,index_exclude_cloud_water,sun_zenith_deg,sun_azimuth_deg, slope_data,aspect_data,dim)
