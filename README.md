@@ -1,5 +1,5 @@
 # MFmask
-<b>IMPORTANT: Fmask 4.0 software is almost done. This version is developed based on Fmask 3.3 version and this MFmask 1.1 version. Fmask 4.0 will have much better cloud, cloud shadow, and snow detection results for Sentinel-2 data and better results for Landsats 4-8 data as well (compared to the Fmask 3.3 version that is currently being used by USGS as the Colection 1 QA Band, and the MFmask 1.1 version that works better in mountainous area than Fmask 3.3 version).</b>
+<b>IMPORTANT: Fmask 4.0 software will come soon. This version is developed based on Fmask 3.3 version and this MFmask 1.1 version. Fmask 4.0 will have much better cloud, cloud shadow, and snow detection results for Sentinel-2 data and better results for Landsats 4-8 data as well (compared to the Fmask 3.3 version that is currently being used by USGS as the Colection 1 QA Band, and the MFmask 1.1 version that works better in mountainous area than Fmask 3.3 version).</b>
 
 
 Great news! MFmask 1.1 beta has been publicly released. This new package can FULL AUTOMATEDLY work!
