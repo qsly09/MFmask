@@ -385,6 +385,6 @@ function [ similar_num,data_cloud_matched, data_shadow_matched] = cld2slds_match
             end
         end
         data_cloud_matched=segm_cloud_tmp;
-        data_shadow_matched(data_shadow_potential==0)=0;
+        data_shadow_matched(data_cloud_matched==1)=0; % do not make the overlap, but need to remove clouds.
     end
 end
