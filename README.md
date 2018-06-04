@@ -1,6 +1,7 @@
 # MFmask
 <b>IMPORTANT: Fmask 4.0 beta software on Windows (~1G) is ready to use now! It can be downloaded at this [link] (https://drive.google.com/drive/folders/1SXBnEBDJ1Kbv7IQ9qIgqloYHZfdP6O1O).</b> This version has substantial better cloud, cloud shadow, and snow detection results for Sentinel 2 and better results (compared to the 3.3 version that is currently being used by USGS as the Collection 1 QA Band) for Landsats 4-8 . This one software can be used for Landsats 4-8 Collection 1 product and Sentinel 2 Level-1C product at the same time. NOTE this new version (including all features of MFmask) also works better in mountainous area than MFmask 1.1.
 
+<b>Futher information about the Fmask 4.0 tool can be found at https://github.com/GERSL/Fmask.</b>
 
 Great news! MFmask 1.1 beta has been publicly released. This new package can FULL AUTOMATEDLY work!
 
