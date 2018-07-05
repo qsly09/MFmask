@@ -126,6 +126,23 @@ if Lnum >= 4 && Lnum <=7
     ulx=str2double(geo_str(strmatch('CORNER_UL_PROJECTION_X_PRODUCT',geo_str)+2));
     uly=str2double(geo_str(strmatch('CORNER_UL_PROJECTION_Y_PRODUCT',geo_str)+2));
     ul=[ulx,uly];
+   
+    % Read in latidtude and longtitude.
+    ul_lat=str2double(geo_str(strmatch('CORNER_UL_LAT_PRODUCT',geo_str)+2));
+    ul_lon=str2double(geo_str(strmatch('CORNER_UL_LON_PRODUCT',geo_str)+2));
+    ur_lat=str2double(geo_str(strmatch('CORNER_UR_LAT_PRODUCT',geo_str)+2));
+    ur_lon=str2double(geo_str(strmatch('CORNER_UR_LON_PRODUCT',geo_str)+2));
+    ll_lat=str2double(geo_str(strmatch('CORNER_LL_LAT_PRODUCT',geo_str)+2));
+    ll_lon=str2double(geo_str(strmatch('CORNER_LL_LON_PRODUCT',geo_str)+2));
+    lr_lat=str2double(geo_str(strmatch('CORNER_LR_LAT_PRODUCT',geo_str)+2));
+    lr_lon=str2double(geo_str(strmatch('CORNER_LR_LON_PRODUCT',geo_str)+2));
+    
+    north=max(ul_lat,ur_lat);
+    south=min(ll_lat,lr_lat);
+    west=min(ul_lon,ll_lon);
+    east=max(ur_lon,lr_lon);
+    bbox=[north,south,west,east];
+    
     % Read in date of year
     char_doy=char(geo_str(strmatch('LANDSAT_SCENE_ID',geo_str)+2));
     doy=str2double(char_doy(15:17));
