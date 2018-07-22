@@ -5,6 +5,7 @@
 % This minor modification was made because the match similarity may be
 % wrong when some parts of cloud are out of the observations.
 % 
+% fix the bug that double projected pixels may be out of the observation range   by Shi. at 21. Jul., 2018
 % fix the bug that this cannot work when the number of cloud objects is
 % less than 14  by Shi. at 20, Dec., 2017.
 % still improve the prediction of cloud shadow location when no DEMs  by Shi. at 13, Sept., 2017
@@ -227,10 +228,15 @@ function [ similar_num,data_cloud_matched, data_shadow_matched] = cld2slds_match
                 % some projected pixels out of observations.
                 tmp_i_plane_expd_tmp=tmp_i_plane+dim_expd;
                 tmp_j_plane_expd_tmp=tmp_j_plane+dim_expd;
-                out_piexls=find(tmp_i_plane_expd_tmp<dim_expand(1)|tmp_j_plane_expd_tmp<dim_expand(2));
-                tmp_i_plane_expd=tmp_i_plane_expd_tmp(out_piexls);
-                tmp_j_plane_expd=tmp_j_plane_expd_tmp(out_piexls);
-                clear tmp_i_plane_expd_tmp tmp_j_plane_expd_tmp;
+                % out_piexls=find(tmp_i_plane_expd_tmp<dim_expand(1)|tmp_j_plane_expd_tmp<dim_expand(2));
+                % tmp_i_plane_expd=tmp_i_plane_expd_tmp(out_piexls);
+                % tmp_j_plane_expd=tmp_j_plane_expd_tmp(out_piexls);
+                avail_pixels=find(tmp_i_plane_expd_tmp>0&tmp_j_plane_expd_tmp>0&...
+                    tmp_i_plane_expd_tmp<=dim_expand(1)&tmp_j_plane_expd_tmp<=dim_expand(2));
+                tmp_i_plane_expd=tmp_i_plane_expd_tmp(avail_pixels);
+                tmp_j_plane_expd=tmp_j_plane_expd_tmp(avail_pixels);
+                
+                clear tmp_i_plane_expd_tmp tmp_j_plane_expd_tmp avail_pixels;
                 tmp_id_plane_expd=sub2ind(dim_expand,tmp_i_plane_expd,tmp_j_plane_expd); % matched shadow locations
                 clear tmp_i_plane_expd tmp_j_plane_expd;
                 
@@ -353,12 +359,11 @@ function [ similar_num,data_cloud_matched, data_shadow_matched] = cld2slds_match
                         tmp_tmp_j_plane_expd=tmp_scol_plane+dim_expd;
                         
 %                         % some projected pixels out of observations.
-%                         tmp_i_plane_expd_tmp=tmp_i_plane+dim_expd;
-%                         tmp_j_plane_expd_tmp=tmp_j_plane+dim_expd;
-%                         out_piexls=find(tmp_i_plane_expd_tmp<dim_expand(1)|tmp_j_plane_expd_tmp<dim_expand(2));
-%                         tmp_i_plane_expd=tmp_i_plane_expd_tmp(out_piexls);
-%                         tmp_j_plane_expd=tmp_j_plane_expd_tmp(out_piexls);
-%                         clear tmp_i_plane_expd_tmp tmp_j_plane_expd_tmp;
+                        avail_pixels=find(tmp_tmp_i_plane_expd>0&tmp_tmp_j_plane_expd>0&...
+                            tmp_tmp_i_plane_expd<dim_expand(1)&tmp_tmp_j_plane_expd<dim_expand(2));
+                        tmp_tmp_i_plane_expd=tmp_tmp_i_plane_expd(avail_pixels);
+                        tmp_tmp_j_plane_expd=tmp_tmp_j_plane_expd(avail_pixels);
+                        clear avail_pixels;
                         
                         tmp_tmp_id_plane_expd=sub2ind(dim_expand,tmp_tmp_i_plane_expd,tmp_tmp_j_plane_expd); % matched shadow locations
                         clear tmp_srow_plane tmp_scol_plane tmp_tmp_i_plane_expd tmp_tmp_j_plane_expd;
